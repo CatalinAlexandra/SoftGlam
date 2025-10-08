@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+US+Modern:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+US+Modern:wght@100..400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: #faf7f3;
+  --beige: #f0e4d3;
+  --coffee: #dcc5b2;
+  --peach: #d9a299;
+}
+.logo {
+  font-family: 'Dancing Script', cursive;
+  size: 50px;
+  align-items: center;
+}
+
+body {
+  font-family: 'Playwrite US Modern', sans-serif;
+  background-color: var(--white);
+  height: 110vh;
+}
+
+.product-card {
+  background-color: white;
+  border: 2px solid var(--peach);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  width: 20vw;
+  padding: 5px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 20vh;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.service-info h3 {
+  margin: 10 px 0;
+  font-size: 18px;
+  color: var(--coffee);
+  text-align: center;
+}
+
+.price {
+  color: var(--peach);
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.buttons button {
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+.description-btn {
+  background-color: #d1aa8a;
+}
+.cart-btn {
+  background-color: #b37f77;
+}
