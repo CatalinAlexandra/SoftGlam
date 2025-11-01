@@ -117,6 +117,75 @@ body {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: -8px;
-  right: 30px;
+  top: -2px;
+  right: 38px;
+}
+h3 {
+  color: #b37f77;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+#add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+#name,
+#price,
+#imageURL,
+#details,
+#add-or-edit-btn {
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  font-size: 14px;
+  outline: none;
+}
+
+#details {
+  min-height: 50px;
+  resize: vertical;
+}
+
+#add-or-edit-btn {
+  background-color: #d1aa8a;
+  color: white;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+#add-btn:hover {
+  opacity: 1;
+}
+
+#services-table {
+  width: 100%;
+  padding: 10px;
+}
+
+#services-table thead th,
+#services-table tbody td {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#services-table tbody tr td {
+  text-align: center;
+}
+
+.cell-img img {
+  height: 60px;
+  width: 60px;
+}
+.action-btn {
+  background-color: var(--peach);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  margin: 0 2px;
 }
