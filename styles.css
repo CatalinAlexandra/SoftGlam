@@ -12,10 +12,10 @@
   --coffee: #dcc5b2;
   --peach: #d9a299;
 }
-.logo {
-  font-family: 'Dancing Script', cursive;
-  size: 50px;
-  align-items: center;
+.logo img {
+  height: 60px;
+  margin-left: 20px;
+  display: flex;
 }
 
 body {
@@ -24,7 +24,7 @@ body {
   height: 100vh;
 }
 
-.products-container {
+.services-container {
   padding: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -81,4 +81,42 @@ body {
 }
 .cart-btn {
   background-color: #b37f77;
+}
+.navbar {
+  background-color: #d1aa8a;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  z-index: 100;
+}
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-actions a {
+  text-decoration: none;
+  color: var(--white);
+}
+.cart-link {
+  position: relative;
+}
+.badge {
+  height: 15px;
+  width: 15px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -8px;
+  right: 30px;
 }
