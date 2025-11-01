@@ -12,10 +12,21 @@
   --coffee: #dcc5b2;
   --peach: #d9a299;
 }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
 .logo img {
   height: 60px;
-  margin-left: 20px;
-  display: flex;
+}
+
+.logo-name {
+  font-family: 'Dancing Script', cursive;
+  font-size: 32px;
+  color: var(--white);
 }
 
 body {
@@ -188,4 +199,189 @@ h3 {
   color: white;
   cursor: pointer;
   margin: 0 2px;
+}
+
+.cart-container {
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.empty-cart {
+  font-size: 1.2rem;
+  color: #777;
+  padding: 40px;
+  background: #f8f8f8;
+  border-radius: 16px;
+}
+
+.cart-item {
+  background: #fff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 15px 20px;
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.cart-item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid #eee;
+}
+
+.item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item-details h4 {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.item-details p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.item-quantity button {
+  background-color: #65a30d;
+  border: none;
+  color: white;
+  font-weight: 700;
+  border-radius: 8px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.item-quantity button:hover {
+  background-color: #4d7c0f;
+}
+
+.item-total {
+  font-weight: 600;
+  color: #222;
+  min-width: 80px;
+  text-align: right;
+}
+
+button.delete {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+button.delete:hover {
+  opacity: 0.85;
+}
+
+.cart-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto 0;
+  background: var(--beige);
+  border-radius: 14px;
+  padding: 16px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.cart-summary .buttons-container {
+  display: flex;
+  gap: 12px;
+}
+
+.cart-summary button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.clear-cart {
+  background: var(--peach);
+  color: var(--white);
+  border: 2px solid var(--coffee);
+}
+
+.clear-cart:hover,
+.confirm-reservation:hover {
+  background: var(--coffee);
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.confirm-reservation {
+  background: var(--peach);
+  color: var(--white);
+  border: 2px solid var(--coffee);
+}
+.reservation-date {
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid #dcd6d6;
+  background-color: #fff0f5;
+  font-size: 0.95rem;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  width: 150px;
+}
+
+.reservation-date:hover {
+  border-color: var(--beige);
+  box-shadow: 0 4px 8px var(--coffee);
+}
+
+.reservation-date:focus {
+  border-color: var(--beige);
+  box-shadow: 0 0 0 2px var(--coffee);
+  background-color: #fff0f5;
+}
+
+.item-details label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 8px;
+  gap: 4px;
 }
