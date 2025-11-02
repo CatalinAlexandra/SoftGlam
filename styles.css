@@ -523,31 +523,56 @@ button.delete:hover {
 }
 
 @media (max-width: 768px) {
+  /* Containerul de servicii devine o singura coloana */
   .services-container {
     grid-template-columns: 1fr;
     padding: 20px 10px;
     gap: 15px;
   }
 
-  .product-card img {
-    max-height: 140px;
+  /* Cardurile se intind pe latimea containerului */
+  .product-card {
+    width: 100%;
+    padding: 10px;
   }
 
+  /* Imaginile cardurilor se scaleaza automat */
+  .product-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Textul cardului si pretul primesc padding intern */
+  .product-card .service-info,
+  .product-card .price {
+    padding: 5px 10px;
+    text-align: center;
+  }
+
+  /* Butoanele devin pe verticala si ocupa toata latimea cardului */
   .buttons {
     flex-direction: column;
     gap: 8px;
+    width: 100%;
   }
 
+  .buttons button {
+    width: 100%;
+  }
+
+  /* Navbar se adapteaza pe verticala */
   .navbar {
     flex-direction: column;
     height: auto;
     padding: 10px;
   }
 
+  /* Footer se centreaza si se aranjeaza pe verticala */
   .footer-container,
   .footer-right {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    gap: 15px;
   }
 }
