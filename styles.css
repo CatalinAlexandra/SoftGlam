@@ -551,9 +551,9 @@ button.delete:hover {
 .search-container {
   width: 100%;
   display: flex;
-  justify-content: center; /* centrează pe orizontală */
-  align-items: center; /* aliniere verticală */
-  gap: 10px; /* spațiu între input și select */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   margin: 20px 0;
   box-sizing: border-box;
 }
