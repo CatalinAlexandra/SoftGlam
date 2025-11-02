@@ -31,6 +31,9 @@ function displayProducts() {
                     Add to Cart
                   </button>
                 </div>
+                 <div class="details hidden">${
+                   product.details || product.description
+                 }</div>
               </div>
             </div>
           `
@@ -102,12 +105,18 @@ function addCartButtonListeners() {
   });
 
   const descButtons = document.querySelectorAll('.description-btn');
-  descButtons.forEach((btn, i) => {
+  descButtons.forEach((btn) => {
     btn.addEventListener('click', (e) => {
-      const productId =
-        buttons[i]?.dataset.id ||
-        e.target.closest('.product-card').querySelector('.cart-btn').dataset.id;
-      window.location.href = `details.html?id=${productId}`;
+      const card = e.target.closest('.product-card');
+      const detailsDiv = card.querySelector('.details');
+
+      detailsDiv.classList.toggle('hidden');
+
+      if (!detailsDiv.classList.contains('hidden')) {
+        btn.textContent = 'Hide Details';
+      } else {
+        btn.textContent = 'Details';
+      }
     });
   });
 }
