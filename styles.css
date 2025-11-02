@@ -469,3 +469,82 @@ button.delete:hover {
     transform: translateY(0);
   }
 }
+.site-footer {
+  background-color: #d1aa8a;
+  color: var(--white);
+  padding: 40px 20px 20px 20px;
+  font-family: 'Playwrite US Modern', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-about {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-logo img {
+  height: 60px;
+}
+
+.footer-text h4 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 22px;
+  margin: 0;
+}
+
+.footer-text p {
+  margin: 2px 0 0 0;
+  font-size: 14px;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 600px;
+}
+
+.footer-right p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer-social a {
+  color: var(--white);
+  margin-left: 8px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: var(--coffee);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+}
