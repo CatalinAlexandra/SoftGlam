@@ -7,5 +7,6 @@ fetch(`${URL}/${id}`)
   .then((response) => response.json())
   .then(
     (product) =>
-      (document.querySelector('.details-container').innerHTML = product.details)
+      (document.querySelector('.details-container').innerHTML =
+        product.details || product.description)
   );

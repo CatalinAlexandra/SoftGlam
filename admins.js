@@ -61,7 +61,7 @@ function addOrEditNewProduct(e) {
     name: name,
     price: price,
     imageURL: imageURL,
-    details: description,
+    details: details,
   };
 
   const method = isEditMode ? 'PUT' : 'POST';
@@ -101,7 +101,7 @@ function handleActions(e) {
         nameInput.value = product.name;
         priceInput.value = product.price;
         imageURLInput.value = product.imageURL;
-        destailsInput.value = product.details;
+        detailsInput.value = product.details;
       });
     isEditMode = true;
     console.log(addOrEditBtn, isEditMode);

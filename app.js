@@ -37,7 +37,6 @@ function displayProducts() {
         )
         .join('');
 
-      // Attach event listeners after rendering
       addCartButtonListeners();
     })
     .catch((err) => console.error(err));
@@ -75,8 +74,40 @@ function updateCartCount(cart) {
   document.getElementById('cart-count').textContent = count;
 }
 
-// On load, show count from localStorage
 document.addEventListener('DOMContentLoaded', () => {
   const savedCart = JSON.parse(localStorage.getItem('cart')) || {};
   updateCartCount(savedCart);
 });
+
+function addCartButtonListeners() {
+  const buttons = document.querySelectorAll('.cart-btn');
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      const id = btn.dataset.id;
+      const name = btn.dataset.name;
+      const price = parseFloat(btn.dataset.price);
+      const image = btn.dataset.image;
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || {};
+
+      if (cart[id]) {
+        cart[id].quantity++;
+      } else {
+        cart[id] = { name, price, image, quantity: 1 };
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount(cart);
+    });
+  });
+
+  const descButtons = document.querySelectorAll('.description-btn');
+  descButtons.forEach((btn, i) => {
+    btn.addEventListener('click', (e) => {
+      const productId =
+        buttons[i]?.dataset.id ||
+        e.target.closest('.product-card').querySelector('.cart-btn').dataset.id;
+      window.location.href = `details.html?id=${productId}`;
+    });
+  });
+}
