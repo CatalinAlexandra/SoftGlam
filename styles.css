@@ -1,66 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+US+Modern:wght@100..400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+US+Modern:wght@100..400&display=swap');
 
 * {
   margin: 0;
   padding: 0;
-}
-@media (max-width: 768px) {
-  .services-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 16px;
-  }
-
-  .product-card img {
-    height: 100px;
-  }
-
-  .buttons {
-    flex-direction: column;
-    gap: 8px;
-  }
-}
-@media (max-width: 520px) {
-  /* Grid becomes single column */
-  .services-container {
-    grid-template-columns: 1fr;
-    padding: 20px 12px;
-    gap: 12px;
-  }
-
-  .product-card img {
-    height: 140px;
-  }
-
-  /* Buttons stacked */
-  .buttons {
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  /* Details page */
-  .details-card {
-    flex-direction: column;
-    align-items: center;
-    padding: 16px;
-  }
-  .details-card img.details-img {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Cart items */
-  .card-cart {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .cart-summary {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
+  box-sizing: border-box;
 }
 
 :root {
@@ -534,20 +477,6 @@ button.delete:hover {
   opacity: 0.8;
 }
 
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-right {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 15px;
-  }
-}
 .search-container {
   width: 100%;
   display: flex;
@@ -586,4 +515,39 @@ button.delete:hover {
 #category-filter:focus {
   border-color: #b37f77;
   box-shadow: 0 0 8px rgba(179, 127, 119, 0.4);
+}
+@media (max-width: 1024px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: 1fr;
+    padding: 20px 10px;
+    gap: 15px;
+  }
+
+  .product-card img {
+    max-height: 140px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .footer-container,
+  .footer-right {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
 }
