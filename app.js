@@ -15,7 +15,7 @@ function displayProducts() {
       container.innerHTML = products
         .map(
           (product) => `
-            <div class="product-card">
+            <div class="product-card" data-category="${product.category}">
               <img src="${product.imageURL}" alt="product image" />
               <div class="services-info">
                 <h3>${product.name}</h3>
@@ -118,5 +118,31 @@ function addCartButtonListeners() {
         btn.textContent = 'Details';
       }
     });
+  });
+}
+
+const searchInput = document.getElementById('search-input');
+const categoryFilter = document.getElementById('category-filter');
+
+searchInput.addEventListener('input', filterProducts);
+categoryFilter.addEventListener('change', filterProducts);
+
+function filterProducts() {
+  const searchTerm = searchInput.value.toLowerCase();
+  const category = categoryFilter.value;
+
+  const allCards = document.querySelectorAll('.product-card');
+  allCards.forEach((card) => {
+    const name = card.querySelector('h3').textContent.toLowerCase();
+    const cardCategory = card.dataset.category;
+
+    const matchesSearch = name.includes(searchTerm);
+    const matchesCategory = category === 'all' || cardCategory === category;
+
+    if (matchesSearch && matchesCategory) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
   });
 }

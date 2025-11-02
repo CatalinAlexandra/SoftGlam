@@ -548,3 +548,42 @@ button.delete:hover {
     margin-top: 15px;
   }
 }
+.search-container {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* centrează pe orizontală */
+  align-items: center; /* aliniere verticală */
+  gap: 10px; /* spațiu între input și select */
+  margin: 20px 0;
+  box-sizing: border-box;
+}
+
+#search-input {
+  width: 50%;
+  max-width: 400px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 1px solid #d9a299;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#search-input:focus {
+  border-color: #b37f77;
+  box-shadow: 0 0 8px rgba(179, 127, 119, 0.4);
+}
+
+#category-filter {
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 1px solid #d9a299;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#category-filter:focus {
+  border-color: #b37f77;
+  box-shadow: 0 0 8px rgba(179, 127, 119, 0.4);
+}
